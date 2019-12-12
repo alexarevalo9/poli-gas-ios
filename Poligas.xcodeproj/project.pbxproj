@@ -13,6 +13,8 @@
 		28A499A823A1403400F99F70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A499A623A1403400F99F70 /* Main.storyboard */; };
 		28A499AA23A1403800F99F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28A499A923A1403800F99F70 /* Assets.xcassets */; };
 		28A499AD23A1403800F99F70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A499AB23A1403800F99F70 /* LaunchScreen.storyboard */; };
+		28A499B523A1496400F99F70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28A499B423A1496400F99F70 /* GoogleService-Info.plist */; };
+		3DB70F90AE2D167AA64DBA0F /* Pods_Poligas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4844D79A12D42CAE368B71B2 /* Pods_Poligas.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		28A499A923A1403800F99F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28A499AC23A1403800F99F70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28A499AE23A1403800F99F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28A499B423A1496400F99F70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4844D79A12D42CAE368B71B2 /* Pods_Poligas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poligas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		830E0B779B42A8A5082A4877 /* Pods-Poligas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poligas.release.xcconfig"; path = "Target Support Files/Pods-Poligas/Pods-Poligas.release.xcconfig"; sourceTree = "<group>"; };
+		B8252ADDB85E06259EED6C5F /* Pods-Poligas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poligas.debug.xcconfig"; path = "Target Support Files/Pods-Poligas/Pods-Poligas.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DB70F90AE2D167AA64DBA0F /* Pods_Poligas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				28A4999F23A1403400F99F70 /* Poligas */,
 				28A4999E23A1403400F99F70 /* Products */,
+				48CFD1220CA28F1437B465E9 /* Pods */,
+				309549F6504300D05199E474 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,9 +71,28 @@
 				28A499A623A1403400F99F70 /* Main.storyboard */,
 				28A499A923A1403800F99F70 /* Assets.xcassets */,
 				28A499AB23A1403800F99F70 /* LaunchScreen.storyboard */,
+				28A499B423A1496400F99F70 /* GoogleService-Info.plist */,
 				28A499AE23A1403800F99F70 /* Info.plist */,
 			);
 			path = Poligas;
+			sourceTree = "<group>";
+		};
+		309549F6504300D05199E474 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4844D79A12D42CAE368B71B2 /* Pods_Poligas.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48CFD1220CA28F1437B465E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8252ADDB85E06259EED6C5F /* Pods-Poligas.debug.xcconfig */,
+				830E0B779B42A8A5082A4877 /* Pods-Poligas.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28A499B123A1403800F99F70 /* Build configuration list for PBXNativeTarget "Poligas" */;
 			buildPhases = (
+				B38CC7898DC65E04B9D0396F /* [CP] Check Pods Manifest.lock */,
 				28A4999923A1403400F99F70 /* Sources */,
 				28A4999A23A1403400F99F70 /* Frameworks */,
 				28A4999B23A1403400F99F70 /* Resources */,
+				6031EE45741B3F74FE2FC1CA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +156,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				28A499AD23A1403800F99F70 /* LaunchScreen.storyboard in Resources */,
+				28A499B523A1496400F99F70 /* GoogleService-Info.plist in Resources */,
 				28A499AA23A1403800F99F70 /* Assets.xcassets in Resources */,
 				28A499A823A1403400F99F70 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6031EE45741B3F74FE2FC1CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Poligas/Pods-Poligas-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Poligas/Pods-Poligas-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Poligas/Pods-Poligas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B38CC7898DC65E04B9D0396F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Poligas-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		28A4999923A1403400F99F70 /* Sources */ = {
@@ -282,6 +355,7 @@
 		};
 		28A499B223A1403800F99F70 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8252ADDB85E06259EED6C5F /* Pods-Poligas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +373,7 @@
 		};
 		28A499B323A1403800F99F70 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 830E0B779B42A8A5082A4877 /* Pods-Poligas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

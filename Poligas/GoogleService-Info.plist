@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>487875076930-cprjkpgc9hue5bg93829lkr5l9t93ltt.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.487875076930-cprjkpgc9hue5bg93829lkr5l9t93ltt</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAtMqnJQ3HMW5h5zHhMtm12St0C9Xb_G90</string>
+	<key>GCM_SENDER_ID</key>
+	<string>487875076930</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>EPN.Poligas</string>
+	<key>PROJECT_ID</key>
+	<string>poligas-516a2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>poligas-516a2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:487875076930:ios:f572e57ff684c0aedd5edb</string>
+	<key>DATABASE_URL</key>
+	<string>https://poligas-516a2.firebaseio.com</string>
+</dict>
+</plist>

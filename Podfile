@@ -6,5 +6,9 @@ target 'Poligas' do
   use_frameworks!
 
   # Pods for Poligas
-
+  pod 'Firebase/Auth'  
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore'
+  pod 'IQKeyboardManagerSwift'
+  pod 'Firebase/Storage'
 end
