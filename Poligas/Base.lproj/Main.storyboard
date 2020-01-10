@@ -82,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="-31.473214285714285"/>
         </scene>
-        <!--Home-->
+        <!--Info-->
         <scene sceneID="PC0-Vu-zkJ">
             <objects>
                 <viewController id="EnH-gK-DhD" sceneMemberID="viewController">
@@ -92,16 +92,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="W83-Sn-Ubg"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="4et-yN-nda"/>
+                    <navigationItem key="navigationItem" title="Info" id="4et-yN-nda"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvZ-ix-8RB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2874" y="-702"/>
+            <point key="canvasLocation" x="2874" y="-668"/>
         </scene>
-        <!--Pedido-->
+        <!--Settings-->
         <scene sceneID="Eqx-Zt-yg5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wse-if-NnV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="qdu-tJ-68Z" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q0k-EJ-2oe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -115,10 +114,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Xga-2c-Izy"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Pedido" id="ZHQ-o1-Kxz"/>
+                    <navigationItem key="navigationItem" title="Settings" id="ZHQ-o1-Kxz"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wse-if-NnV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2874" y="-31"/>
+            <point key="canvasLocation" x="2874" y="846"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9u6-5t-ilq">
@@ -136,9 +136,10 @@
             </objects>
             <point key="canvasLocation" x="132" y="772"/>
         </scene>
-        <!--Proceso-->
+        <!--Home-->
         <scene sceneID="4Ia-6o-EXo">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kSc-q6-5gY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="o6F-9u-SvI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cmS-Ir-bVd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -146,27 +147,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Q6e-BP-Ou6"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Proceso" id="sHg-Uc-rdj"/>
+                    <navigationItem key="navigationItem" title="Home" id="sHg-Uc-rdj"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kSc-q6-5gY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2860.8695652173915" y="628.125"/>
-        </scene>
-        <!--Datos-->
-        <scene sceneID="iza-G5-wIw">
-            <objects>
-                <viewController id="gSJ-TY-kCV" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2YI-KW-laV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="awg-Zy-Usl"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Datos" id="nZZ-4s-ajU"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQx-ku-pTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2873.913043478261" y="1298.4375"/>
+            <point key="canvasLocation" x="2874" y="90"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Tkn-Ou-cSs">
@@ -174,6 +158,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bh1-Ef-VsV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N7f-Wt-tJX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -181,18 +166,17 @@
                         <segue destination="PvD-GD-t9p" kind="relationship" relationship="viewControllers" id="m6e-kH-A3B"/>
                         <segue destination="tY0-kO-Irx" kind="relationship" relationship="viewControllers" id="kgh-EB-3FB"/>
                         <segue destination="FhM-GW-ka9" kind="relationship" relationship="viewControllers" id="VjG-vh-wKb"/>
-                        <segue destination="kjU-Vf-6yc" kind="relationship" relationship="viewControllers" id="GoD-E2-w2T"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOh-dN-9sA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1037.68115942029" y="297.99107142857139"/>
         </scene>
-        <!--Home-->
+        <!--Info-->
         <scene sceneID="aEh-br-STk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PvD-GD-t9p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Cng-96-8Uj"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="info.circle" catalog="system" id="Cng-96-8Uj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ssr-QT-M3T">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -205,13 +189,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U77-fy-AmB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1973.913043478261" y="-702.45535714285711"/>
+            <point key="canvasLocation" x="1974" y="-668"/>
         </scene>
-        <!--Proceso-->
+        <!--Home-->
         <scene sceneID="ucW-Kz-cYL">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10m-uM-MBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tY0-kO-Irx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Proceso" image="paperplane" catalog="system" id="5nR-3C-tXs"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="5nR-3C-tXs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="TeA-hl-xgp">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -222,34 +207,14 @@
                         <segue destination="o6F-9u-SvI" kind="relationship" relationship="rootViewController" id="5Vj-mm-Hef"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="10m-uM-MBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1950.7246376811595" y="628.125"/>
+            <point key="canvasLocation" x="2003" y="91"/>
         </scene>
-        <!--Datos-->
-        <scene sceneID="jCO-rE-0Vw">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kjU-Vf-6yc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Datos" image="person.crop.circle" catalog="system" id="quX-l1-Ld6"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="qKh-Hd-w90">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gSJ-TY-kCV" kind="relationship" relationship="rootViewController" id="sLg-Tw-jAX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ngm-sc-uxU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1963.7681159420292" y="1298.4375"/>
-        </scene>
-        <!--Pedido-->
+        <!--Settings-->
         <scene sceneID="DxN-KU-PYD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FhM-GW-ka9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pedido" image="flame" catalog="system" id="2eZ-AC-7ND"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="person" catalog="system" id="2eZ-AC-7ND"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="HIe-7c-adB">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -262,13 +227,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQ4-a6-bBh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974" y="-31"/>
+            <point key="canvasLocation" x="2003" y="846"/>
         </scene>
     </scenes>
     <resources>
-        <image name="flame" catalog="system" width="54" height="64"/>
         <image name="house" catalog="system" width="64" height="54"/>
-        <image name="paperplane" catalog="system" width="64" height="60"/>
-        <image name="person.crop.circle" catalog="system" width="64" height="62"/>
+        <image name="info.circle" catalog="system" width="64" height="62"/>
+        <image name="person" catalog="system" width="64" height="60"/>
     </resources>
 </document>
