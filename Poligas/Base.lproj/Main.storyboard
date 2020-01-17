@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="we8-UF-IW7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -139,7 +139,6 @@
         <!--Home-->
         <scene sceneID="4Ia-6o-EXo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kSc-q6-5gY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="o6F-9u-SvI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cmS-Ir-bVd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -149,6 +148,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="sHg-Uc-rdj"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kSc-q6-5gY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2874" y="90"/>
         </scene>
@@ -194,7 +194,6 @@
         <!--Home-->
         <scene sceneID="ucW-Kz-cYL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="10m-uM-MBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tY0-kO-Irx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="5nR-3C-tXs"/>
                     <toolbarItems/>
@@ -207,8 +206,56 @@
                         <segue destination="o6F-9u-SvI" kind="relationship" relationship="rootViewController" id="5Vj-mm-Hef"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10m-uM-MBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2003" y="91"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="51y-fd-Dmg">
+            <objects>
+                <viewController id="we8-UF-IW7" customClass="MapViewController" customModule="Poligas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GFL-uF-Drb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5gU-v6-R1N">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="818" id="2bu-6k-6Zf"/>
+                                    <constraint firstAttribute="width" constant="414" id="75M-8n-LGd"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pra-dV-Bzj">
+                                <rect key="frame" x="344" y="785.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="IHb-9f-SkI"/>
+                                    <constraint firstAttribute="height" constant="50.5" id="vQi-1k-l1y"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="location.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="centerLocationPressed:" destination="we8-UF-IW7" eventType="touchUpInside" id="5Py-uw-wl6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YwG-l6-axF" firstAttribute="bottom" secondItem="pra-dV-Bzj" secondAttribute="bottom" constant="26.5" id="3f1-qB-PvK"/>
+                            <constraint firstItem="YwG-l6-axF" firstAttribute="trailing" secondItem="pra-dV-Bzj" secondAttribute="trailing" constant="20" id="GMX-EC-c75"/>
+                            <constraint firstItem="5gU-v6-R1N" firstAttribute="bottom" secondItem="YwG-l6-axF" secondAttribute="bottom" id="KRd-Gg-ya4"/>
+                            <constraint firstItem="5gU-v6-R1N" firstAttribute="trailing" secondItem="YwG-l6-axF" secondAttribute="trailing" id="SoO-J6-5am"/>
+                            <constraint firstItem="5gU-v6-R1N" firstAttribute="top" secondItem="YwG-l6-axF" secondAttribute="top" id="fJW-YK-Kl4"/>
+                            <constraint firstItem="5gU-v6-R1N" firstAttribute="leading" secondItem="YwG-l6-axF" secondAttribute="leading" id="mbf-64-n46"/>
+                            <constraint firstItem="pra-dV-Bzj" firstAttribute="leading" secondItem="YwG-l6-axF" secondAttribute="leading" constant="344" id="wnu-fl-IIP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YwG-l6-axF"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="5gU-v6-R1N" id="Mhl-En-oZz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b4V-UV-CBl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-676.81159420289862" y="760.71428571428567"/>
         </scene>
         <!--Settings-->
         <scene sceneID="DxN-KU-PYD">
@@ -233,6 +280,7 @@
     <resources>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="info.circle" catalog="system" width="64" height="62"/>
+        <image name="location.circle" catalog="system" width="64" height="62"/>
         <image name="person" catalog="system" width="64" height="60"/>
     </resources>
 </document>

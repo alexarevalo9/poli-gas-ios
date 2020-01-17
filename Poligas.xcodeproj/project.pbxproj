@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28746BEE23D1E6A500494DF7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28746BED23D1E6A500494DF7 /* MapViewController.swift */; };
+		28746BF323D2047C00494DF7 /* mapgpx.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 28746BF223D2047C00494DF7 /* mapgpx.gpx */; };
 		28A499A123A1403400F99F70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A499A023A1403400F99F70 /* AppDelegate.swift */; };
 		28A499A323A1403400F99F70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A499A223A1403400F99F70 /* SceneDelegate.swift */; };
 		28A499A523A1403400F99F70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A499A423A1403400F99F70 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28746BED23D1E6A500494DF7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		28746BF223D2047C00494DF7 /* mapgpx.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapgpx.gpx; sourceTree = "<group>"; };
 		28A4999D23A1403400F99F70 /* Poligas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poligas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A499A023A1403400F99F70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28A499A223A1403400F99F70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 				28A499AB23A1403800F99F70 /* LaunchScreen.storyboard */,
 				28A499B423A1496400F99F70 /* GoogleService-Info.plist */,
 				28A499AE23A1403800F99F70 /* Info.plist */,
+				28746BED23D1E6A500494DF7 /* MapViewController.swift */,
+				28746BF223D2047C00494DF7 /* mapgpx.gpx */,
 			);
 			path = Poligas;
 			sourceTree = "<group>";
@@ -91,7 +97,6 @@
 				B8252ADDB85E06259EED6C5F /* Pods-Poligas.debug.xcconfig */,
 				830E0B779B42A8A5082A4877 /* Pods-Poligas.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -156,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28A499AD23A1403800F99F70 /* LaunchScreen.storyboard in Resources */,
+				28746BF323D2047C00494DF7 /* mapgpx.gpx in Resources */,
 				28A499B523A1496400F99F70 /* GoogleService-Info.plist in Resources */,
 				28A499AA23A1403800F99F70 /* Assets.xcassets in Resources */,
 				28A499A823A1403400F99F70 /* Main.storyboard in Resources */,
@@ -214,6 +220,7 @@
 				28A499A523A1403400F99F70 /* ViewController.swift in Sources */,
 				28A499A123A1403400F99F70 /* AppDelegate.swift in Sources */,
 				28A499A323A1403400F99F70 /* SceneDelegate.swift in Sources */,
+				28746BEE23D1E6A500494DF7 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
