@@ -226,11 +226,7 @@
         <!--Home-->
         <scene sceneID="4Ia-6o-EXo">
             <objects>
-<<<<<<< HEAD
-                <viewController id="o6F-9u-SvI" sceneMemberID="viewController">
-=======
                 <viewController modalPresentationStyle="fullScreen" id="o6F-9u-SvI" sceneMemberID="viewController">
->>>>>>> remotes/bryanz0/poli-gas-ios/develop
                     <view key="view" contentMode="scaleToFill" id="cmS-Ir-bVd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -389,11 +385,7 @@
                         <segue destination="x2j-r1-9jw" kind="show" id="2NM-HA-hn1"/>
                     </connections>
                 </viewController>
-<<<<<<< HEAD
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kSc-q6-5gY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-=======
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOM-XY-j46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
->>>>>>> remotes/bryanz0/poli-gas-ios/develop
             </objects>
             <point key="canvasLocation" x="3834.7826086956525" y="89.732142857142847"/>
         </scene>
@@ -799,13 +791,7 @@ o sugerencia que desees que conozcamos</string>
         <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="hourglass.bottomhalf.fill" catalog="system" width="54" height="64"/>
         <image name="house" catalog="system" width="64" height="54"/>
-<<<<<<< HEAD
-        <image name="info.circle" catalog="system" width="64" height="62"/>
-        <image name="location.circle" catalog="system" width="64" height="62"/>
-        <image name="person" catalog="system" width="64" height="60"/>
-=======
         <image name="info.circle" catalog="system" width="64" height="60"/>
         <image name="person" catalog="system" width="64" height="58"/>
->>>>>>> remotes/bryanz0/poli-gas-ios/develop
     </resources>
 </document>
