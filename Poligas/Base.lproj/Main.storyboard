@@ -43,11 +43,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVv-b7-tMJ">
-                                <rect key="frame" x="-8.5" y="427" width="431" height="425"/>
+                                <rect key="frame" x="99.5" y="427" width="215.5" height="212.50000000000006"/>
                                 <state key="normal" backgroundImage="Lens"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIK-bl-YCf">
-                                <rect key="frame" x="137" y="913" width="140" height="38"/>
+                                <rect key="frame" x="137" y="700.5" width="140" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="8hE-0G-Qkn"/>
                                 </constraints>
@@ -57,7 +57,6 @@
                                 </state>
                                 <connections>
                                     <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VDC-gb-JlQ"/>
-                                    <segue destination="we8-UF-IW7" kind="presentation" modalPresentationStyle="fullScreen" id="AQj-5a-ced"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POLIGAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc7-z0-Nl4">
@@ -109,6 +108,7 @@
                     <connections>
                         <outlet property="activityview" destination="Yws-3S-3bh" id="Ie8-Uw-c3b"/>
                         <outlet property="phone" destination="qXQ-O1-V3S" id="fle-VZ-j9F"/>
+                        <segue destination="we8-UF-IW7" kind="show" identifier="loginSuccessSegue" id="lJG-bP-nNW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -764,7 +764,7 @@ o sugerencia que desees que conozcamos</string>
         <!--Map View Controller-->
         <scene sceneID="51y-fd-Dmg">
             <objects>
-                <viewController id="we8-UF-IW7" customClass="MapViewController" customModule="Poligas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="we8-UF-IW7" customClass="MapViewController" customModule="Poligas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GFL-uF-Drb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -811,6 +811,7 @@ o sugerencia que desees que conozcamos</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YwG-l6-axF"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wJ8-ke-Bsq"/>
                     <connections>
                         <outlet property="mapView" destination="5gU-v6-R1N" id="Mhl-En-oZz"/>
                     </connections>

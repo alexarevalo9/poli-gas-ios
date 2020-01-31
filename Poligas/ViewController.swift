@@ -28,35 +28,35 @@ class ViewController: UIViewController {
     @IBAction func saveButton(_ sender: Any) {
         activityview.isHidden = false
         activityview.startAnimating()
+        /*
+         let llamardata = firestore.collection("data").document("prueba")
+         
+         llamardata.getDocument {(document, error) in
+         if let document = document, document.exists {
+         let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+         print("Document data: \(dataDescription)")
+         
+         
+         } else {
+         print("Document does not exist")
+         }
+         }*/
         
-        let llamardata = firestore.collection("data").document("prueba")
         
-        llamardata.getDocument {(document, error) in
-            if let document = document, document.exists {
-                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                print("Document data: \(dataDescription)")
+        firestore.collection("data").document("prueba").setData(
+            [
+                "phone": self.phone.text ?? "",
                 
-                
-            } else {
-                print("Document does not exist")
+        ]){ (error) in
+            if error != nil {
+                self.showAlert(title: "Error", message: error?.localizedDescription ?? "Error")
             }
+            if error == nil {
+            }
+            
         }
-        
-        
-        /* firestore.collection("data").document("prueba").setData(
-         [
-         "phone": self.phone.text ?? "",
-         
-         ]){ (error) in
-         if error != nil {
-         self.showAlert(title: "Error", message: error?.localizedDescription ?? "Error")
-         }
-         if error == nil {
-         }
-         
-         }
-         self.activityview.stopAnimating()
-         self.performSegue(withIdentifier: "loginSuccessSegue", sender: self)*/
+        self.activityview.stopAnimating()
+        self.performSegue(withIdentifier: "loginSuccessSegue", sender: self)
     }
     
     
