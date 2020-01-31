@@ -11,43 +11,60 @@ import FirebaseAuth
 
 
 class ViewController: UIViewController {
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
     
+    //imageView Type iCarousel
+    @IBOutlet weak var carouselCards: iCarousel!
+    
+    //arrayTanq
+    var cardsImg = [
+        UIImage(named: "BlueTank"),
+        UIImage(named: "YellowTank"),
+        UIImage(named: "IndusTanq")
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //cargar carrusel tipo rotary
+        carouselCards.type = .rotary
+        carouselCards.contentMode = .scaleToFill
     }
 
-    @IBAction func loginButton(_ sender: Any) {
-        
-        guard let email = emailTextField.text,
-            let password = passwordTextField.text else {
-            return
-        }
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            print("Result: \(result)")
-            print("Error: \(error)")
-            
-            if error != nil {
-                self.presentAlertWhit(title: "Error", message: error?.localizedDescription ?? "Ups! An Error Ocurred")
-            } else {
-                self.performSegue(withIdentifier: "loginSuccessSegue", sender: self)
-            }
-        }
-    }
+    //para obtener el indice de la carta seleccionada
+    // let indice = carouselCards.currentItemIndex
     
     private func presentAlertWhit(title : String, message : String){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAlertAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.emailTextField.text = ""
+            /*self.emailTextField.text = ""
             self.passwordTextField.text = ""
-            self.emailTextField.becomeFirstResponder()
+            self.emailTextField.becomeFirstResponder() */
         }
         
         alertController.addAction(okAlertAction)
         present(alertController, animated: true, completion: nil)
     }
     
+    
 }
 
+//Funcion para la animacion y la vista
+extension ViewController: iCarouselDelegate, iCarouselDataSource{
+    func numberOfItems(in carousel: iCarousel) -> Int {
+        return cardsImg.count
+    }
+    
+    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+        var imageView: UIImageView!
+        if view == nil {
+            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 350, height: 200))
+            imageView.contentMode = .scaleAspectFit
+        }else{
+             imageView = view as? UIImageView
+            
+        }
+        imageView.image = cardsImg[index]
+        return imageView
+    }
+    
+    
+}
