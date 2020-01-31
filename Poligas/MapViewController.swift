@@ -18,6 +18,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()//Nos ayuda a gestion ubicaciones del mapa
     let firestore = Firestore.firestore()
+    var locationPin : CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +45,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let lat = lastLocation.latitude.description
         let long = lastLocation.longitude.description
         
-        firestore.collection("location").document("test").setData(
-            ["coordinates": [lat, long] ]
-        ){(error) in
+        firestore.collection("location").document("test").setData(["coordinates": [lat, long] ]){(error) in
             if error != nil{
                 self.showAlert(title: "Error", message: error?.localizedDescription ?? "Error")
             }}
@@ -76,6 +75,32 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         return nil
     }
     
+    func mapView(_ mapView: MKMapView, annotationView pinAnnotation: MKAnnotationView, didChange newState: MKAnnotationView.DragState, fromOldState oldState: MKAnnotationView.DragState) {
+        
+        
+        
+        //let coordinate : CLLocation = pinAnnotation.annotation?.coordinate
+        
+        //print("Coordiante", coordinate)
+        
+        let coordinates = CLLocation(latitude: pinAnnotation.annotation?.coordinate.latitude ?? 0, longitude: pinAnnotation.annotation?.coordinate.longitude ?? 0)
+        
+        //centerMapIn(location: center)
+        
+        //print("Coordiante", center)
+        
+        locationPin = coordinates
+        //centerMapIn(location: pinAnnotation.annotation?.coordinate as CLLocation)
+        
+        
+        
+        
+        //centerMapIn(location: view.coordinateSpace.convert(CLLocation, from: UICoordinateSpace))
+    }
+    
+    
+
+    
     
     func showAlert(title : String, message : String){
         let alertController = UIAlertController(title : title, message : message, preferredStyle: .alert)
@@ -95,9 +120,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    
     @IBAction func centerLocationPressed(_ sender: Any) {
-        centerMapIn(location: locationManager.location!)
+        if(locationPin != nil){
+            centerMapIn(location: locationPin)
+        }else{
+            centerMapIn(location: locationManager.location)
+        }
+        
     }
     
     
