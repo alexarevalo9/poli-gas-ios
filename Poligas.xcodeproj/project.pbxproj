@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		283BCC3C23E4875000E9786D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283BCC3B23E4875000E9786D /* HomeViewController.swift */; };
 		28746BEE23D1E6A500494DF7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28746BED23D1E6A500494DF7 /* MapViewController.swift */; };
 		28746BF323D2047C00494DF7 /* mapgpx.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 28746BF223D2047C00494DF7 /* mapgpx.gpx */; };
 		28770A7E23D730890054B326 /* ProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28770A7D23D730890054B326 /* ProgressBarViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		283BCC3B23E4875000E9786D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		28746BED23D1E6A500494DF7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		28746BF223D2047C00494DF7 /* mapgpx.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapgpx.gpx; sourceTree = "<group>"; };
 		28770A7D23D730890054B326 /* ProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				93266EEC23E45F0A00F30A15 /* iCarousel.h */,
+				283BCC3B23E4875000E9786D /* HomeViewController.swift */,
 				93266EEB23E45F0A00F30A15 /* iCarousel.m */,
 				28A499A023A1403400F99F70 /* AppDelegate.swift */,
 				28A499A223A1403400F99F70 /* SceneDelegate.swift */,
@@ -233,6 +236,7 @@
 				28770A7E23D730890054B326 /* ProgressBarViewController.swift in Sources */,
 				93266EED23E45F0A00F30A15 /* iCarousel.m in Sources */,
 				28A499A323A1403400F99F70 /* SceneDelegate.swift in Sources */,
+				283BCC3C23E4875000E9786D /* HomeViewController.swift in Sources */,
 				28746BEE23D1E6A500494DF7 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
