@@ -12,4 +12,6 @@ target 'Poligas' do
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Storage'
   pod "FlexibleSteppedProgressBar"
+  pod 'Firebase/Database'
+
 end
