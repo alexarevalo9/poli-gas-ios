@@ -7,47 +7,68 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
+import FirebaseStorage
 import FirebaseAuth
-
-
+import FirebaseDatabase
 class ViewController: UIViewController {
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    
+    @IBOutlet weak var phone: UITextField!
+    @IBOutlet weak var activityview: UIActivityIndicatorView!
+    let firestore = Firestore.firestore()
+    //var ref: DatabaseReference!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        activityview.hidesWhenStopped = true
+        activityview.isHidden = true
     }
 
-    @IBAction func loginButton(_ sender: Any) {
+    @IBAction func savebutton(_ sender: Any, completionHandler: @escaping ()->()) {
+        activityview.isHidden = false
+        activityview.startAnimating()
         
-        guard let email = emailTextField.text,
-            let password = passwordTextField.text else {
-            return
-        }
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            print("Result: \(result)")
-            print("Error: \(error)")
-            
-            if error != nil {
-                self.presentAlertWhit(title: "Error", message: error?.localizedDescription ?? "Ups! An Error Ocurred")
+        let llamardata = firestore.collection("data").document("prueba")
+
+        llamardata.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                print("Document data: \(dataDescription)")
+                
+                
             } else {
-                self.performSegue(withIdentifier: "loginSuccessSegue", sender: self)
+                print("Document does not exist")
             }
         }
-    }
-    
-    private func presentAlertWhit(title : String, message : String){
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAlertAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.emailTextField.text = ""
-            self.passwordTextField.text = ""
-            self.emailTextField.becomeFirstResponder()
-        }
         
-        alertController.addAction(okAlertAction)
-        present(alertController, animated: true, completion: nil)
+
+       /* firestore.collection("data").document("prueba").setData(
+  [
+                 "phone": self.phone.text ?? "",
+                 
+             ]){ (error) in
+              if error != nil {
+                     self.showAlert(title: "Error", message: error?.localizedDescription ?? "Error")
+                   }
+              if error == nil {
+              }
+                 
+             }
+                       self.activityview.stopAnimating()
+                    self.performSegue(withIdentifier: "loginSuccessSegue", sender: self)*/
     }
+
+    
+    
+    func showAlert(title: String, message: String){
+           let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+           let okAlertAction = UIAlertAction(title: "ok", style: .default, handler: nil)
+           
+           alertController.addAction(okAlertAction)
+           
+           present(alertController, animated:true, completion: nil )
+       }
     
 }
 
