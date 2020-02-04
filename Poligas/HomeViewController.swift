@@ -12,6 +12,9 @@ import FirebaseAuth
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var carouselCards: iCarousel!
+   // @IBOutlet weak var txtNUMERO: UITextField!
+    @IBOutlet weak var lblNumero: UILabel!
+    
     
     //arrayTanq
     var cardsImg = [
@@ -26,8 +29,46 @@ class HomeViewController: UIViewController {
         //cargar carrusel tipo rotary
         carouselCards.type = .rotary
         carouselCards.contentMode = .scaleToFill
+        
     }
     
+    
+    @IBAction func btnMas(_ sender: Any) {
+    
+        guard let f1 = Int(lblNumero.text!)else {
+             return
+         }
+        if(f1<3){
+         let suma = f1 + 1
+         self.lblNumero.text = String(suma)
+        }else{
+             self.showAlert(title: "ALERTA", message: "Máximo 3 Tanques")
+        }
+    }
+    
+
+    @IBAction func btnmenos(_ sender: Any) {
+        guard let f1 = Int(lblNumero.text!)else {
+                    return
+                }
+        if (f1 != 0){
+                let suma = f1 - 1
+                self.lblNumero.text = String(suma)
+    }else{
+  self.showAlert(title: "ALERTA", message: "Minimo 1 Tanque")
+    }
+    }
+  
+    
+    func showAlert(title: String, message: String){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAlertAction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        
+        alertController.addAction(okAlertAction)
+        
+        present(alertController, animated:true, completion: nil )
+    }
+
     //para obtener el indice de la carta seleccionada
     // let indice = carouselCards.currentItemIndex
     
@@ -63,7 +104,6 @@ extension HomeViewController: iCarouselDelegate, iCarouselDataSource{
         imageView.image = cardsImg[index]
         return imageView
     }
-    
     
 }
 
