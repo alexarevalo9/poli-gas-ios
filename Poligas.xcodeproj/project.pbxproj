@@ -19,6 +19,7 @@
 		28A499AD23A1403800F99F70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A499AB23A1403800F99F70 /* LaunchScreen.storyboard */; };
 		28A499B523A1496400F99F70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28A499B423A1496400F99F70 /* GoogleService-Info.plist */; };
 		3DB70F90AE2D167AA64DBA0F /* Pods_Poligas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4844D79A12D42CAE368B71B2 /* Pods_Poligas.framework */; };
+		79311CAD23E9BC6400895B08 /* agendarPedidoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311CAC23E9BC6400895B08 /* agendarPedidoViewController.swift */; };
 		93266EED23E45F0A00F30A15 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93266EEB23E45F0A00F30A15 /* iCarousel.m */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		28A499AE23A1403800F99F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28A499B423A1496400F99F70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4844D79A12D42CAE368B71B2 /* Pods_Poligas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poligas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79311CAC23E9BC6400895B08 /* agendarPedidoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = agendarPedidoViewController.swift; sourceTree = "<group>"; };
 		830E0B779B42A8A5082A4877 /* Pods-Poligas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poligas.release.xcconfig"; path = "Target Support Files/Pods-Poligas/Pods-Poligas.release.xcconfig"; sourceTree = "<group>"; };
 		93266EEA23E45F0900F30A15 /* Poligas-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poligas-Bridging-Header.h"; sourceTree = "<group>"; };
 		93266EEB23E45F0A00F30A15 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				28746BF223D2047C00494DF7 /* mapgpx.gpx */,
 				28770A7D23D730890054B326 /* ProgressBarViewController.swift */,
 				93266EEA23E45F0900F30A15 /* Poligas-Bridging-Header.h */,
+				79311CAC23E9BC6400895B08 /* agendarPedidoViewController.swift */,
 			);
 			path = Poligas;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				93266EED23E45F0A00F30A15 /* iCarousel.m in Sources */,
 				28A499A323A1403400F99F70 /* SceneDelegate.swift in Sources */,
 				283BCC3C23E4875000E9786D /* HomeViewController.swift in Sources */,
+				79311CAD23E9BC6400895B08 /* agendarPedidoViewController.swift in Sources */,
 				28746BEE23D1E6A500494DF7 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
