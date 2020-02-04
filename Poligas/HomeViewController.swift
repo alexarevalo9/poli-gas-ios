@@ -51,7 +51,7 @@ class HomeViewController: UIViewController {
         guard let f1 = Int(lblNumero.text!)else {
                     return
                 }
-        if (f1 != 0){
+        if (f1 != 1){
                 let suma = f1 - 1
                 self.lblNumero.text = String(suma)
     }else{
