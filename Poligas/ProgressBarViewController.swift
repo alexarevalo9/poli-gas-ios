@@ -33,14 +33,14 @@ class ProgressBarViewController: UIViewController, FlexibleSteppedProgressBarDel
             constant: 80
         )
         let widthConstraint = progressBar.widthAnchor.constraint(equalToConstant: 350)
-        let heightConstraint = progressBar.heightAnchor.constraint(equalToConstant: 150)
+        let heightConstraint = progressBar.heightAnchor.constraint(equalToConstant: 700)
         NSLayoutConstraint.activate([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
         
         // Customise the progress bar here
         progressBar.numberOfPoints = 4
         progressBar.lineHeight = 3
-        progressBar.radius = 20
-        progressBar.progressRadius = 25
+        progressBar.radius = 10
+        progressBar.progressRadius = 15
         progressBar.progressLineHeight = 3
         progressBar.delegate = self
         progressBar.selectedBackgoundColor = progressColor
