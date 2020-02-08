@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x2j-r1-9jw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rb2-if-ITR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -43,11 +43,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVv-b7-tMJ">
-                                <rect key="frame" x="-8.5" y="427" width="431" height="425.00000000000006"/>
+                                <rect key="frame" x="99.5" y="427" width="215.5" height="212.50000000000006"/>
                                 <state key="normal" backgroundImage="Lens"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIK-bl-YCf">
-                                <rect key="frame" x="137" y="913" width="140" height="38"/>
+                                <rect key="frame" x="137" y="700.5" width="140" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="8hE-0G-Qkn"/>
                                 </constraints>
@@ -430,13 +430,29 @@
                                 <color key="textColor" red="0.79609507319999995" green="0.79600626230000004" blue="0.80000120399999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zT-gC-8GQ">
+                                <rect key="frame" x="97" y="618" width="220" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="Avl-GK-sLH"/>
+                                    <constraint firstAttribute="height" constant="61" id="Xb9-xn-MYB"/>
+                                </constraints>
+                                <state key="normal" title="Comentar" backgroundImage="ButtonBG">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ehg-xB-xkQ" kind="show" id="uM8-ZG-Rmn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="wGQ-c0-BIv" firstAttribute="bottom" secondItem="2zT-gC-8GQ" secondAttribute="bottom" constant="134" id="01B-Wo-F9n"/>
+                            <constraint firstItem="wGQ-c0-BIv" firstAttribute="trailing" secondItem="2zT-gC-8GQ" secondAttribute="trailing" constant="97" id="0Hg-eM-Wf5"/>
                             <constraint firstItem="5eG-9s-BOJ" firstAttribute="leading" secondItem="wGQ-c0-BIv" secondAttribute="leading" id="0ar-rg-lDk"/>
                             <constraint firstItem="5eG-9s-BOJ" firstAttribute="centerX" secondItem="c2I-mG-new" secondAttribute="centerX" id="Q27-aE-jkF"/>
                             <constraint firstItem="RPU-BV-qqr" firstAttribute="centerX" secondItem="vjt-cH-xen" secondAttribute="centerX" id="QyG-AO-8wU"/>
                             <constraint firstItem="5eG-9s-BOJ" firstAttribute="centerX" secondItem="RPU-BV-qqr" secondAttribute="centerX" id="fDR-82-81b"/>
+                            <constraint firstItem="2zT-gC-8GQ" firstAttribute="leading" secondItem="wGQ-c0-BIv" secondAttribute="leading" constant="97" id="fmU-vW-zME"/>
                             <constraint firstItem="5eG-9s-BOJ" firstAttribute="top" secondItem="c2I-mG-new" secondAttribute="topMargin" constant="-95" id="ilm-40-Ugw"/>
                             <constraint firstItem="RPU-BV-qqr" firstAttribute="top" secondItem="wGQ-c0-BIv" secondAttribute="top" constant="39" id="nHE-li-EsB"/>
                             <constraint firstAttribute="bottomMargin" secondItem="5eG-9s-BOJ" secondAttribute="bottom" constant="-83" id="vgv-tf-atd"/>
@@ -446,12 +462,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="dAh-dG-M5O"/>
                     <connections>
-                        <segue destination="Ehg-xB-xkQ" kind="show" id="KnS-BW-YKZ"/>
+                        <outlet property="poligasProgressTextView" destination="vjt-cH-xen" id="fNy-tZ-oym"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTz-y1-atb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5274" y="-1"/>
+            <point key="canvasLocation" x="5273.913043478261" y="-1.3392857142857142"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ooz-wa-sCi">
@@ -683,7 +699,8 @@ o sugerencia que desees que conozcamos</string>
                     </view>
                     <navigationItem key="navigationItem" id="0lF-TW-S3E"/>
                     <connections>
-                        <outlet property="txtFechaEntrega" destination="RIh-hz-l38" id="tg0-WV-gfX"/>
+                        <outlet property="txtFechaEntrega" destination="RIh-hz-l38" id="z49-Rz-KZf"/>
+                        <outlet property="txtHour" destination="3Sk-HU-KdW" id="uky-IY-WYr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nrf-xn-Pbn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
