@@ -22,6 +22,7 @@ class ProgressBarViewController: UIViewController, FlexibleSteppedProgressBarDel
     var totalTime = 0
     
     @IBOutlet weak var poligasProgressTextView: UILabel!
+    @IBOutlet weak var commentButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +74,7 @@ class ProgressBarViewController: UIViewController, FlexibleSteppedProgressBarDel
             startTimer()
         case 4:
             poligasProgressTextView.text = "Gracias por usar nuestra app"
+            commentButton.isHidden = false
         default:
             print("Progress  Bar Error")
         }

@@ -15,6 +15,8 @@ import FirebaseAuth
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
+    let db = Firestore.firestore()
+    
     @IBOutlet weak var mapView: MKMapView!
     let firestore = Firestore.firestore()
     var locationPin : CLLocation!
@@ -31,7 +33,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let coordinates = CLLocationCoordinate2D(latitude: -0.209752, longitude: -78.488034)
         annotation.coordinate = coordinates
         annotation.title = "Poli-Gas"
-        annotation.subtitle = "current location"
+        annotation.subtitle = "Ubicación Actual"
         mapView.addAnnotation(annotation)
         
         centerMapIn(location: CLLocation(latitude: -0.209752, longitude: -78.488034))
@@ -58,6 +60,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let coordinates = CLLocation(latitude: pinAnnotation.annotation?.coordinate.latitude ?? 0, longitude: pinAnnotation.annotation?.coordinate.longitude ?? 0)
         
         locationPin = coordinates
+        saveCurrentLocation(latitud : locationPin.coordinate.latitude, longitud : locationPin.coordinate.longitude)
+       
     }
     
     func showAlert(title : String, message : String){
@@ -82,6 +86,25 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if(locationPin != nil){
             centerMapIn(location: locationPin)
         }
+    }
+    
+    func saveCurrentLocation(latitud : Double, longitud : Double){
+        
+        let useruuid = Auth.auth().currentUser?.uid
+        
+        // Add a new document in collection "location"
+        db.collection("location").document(useruuid!).setData([
+            "latitud": latitud,
+            "longitud": longitud
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        
     }
     
 }

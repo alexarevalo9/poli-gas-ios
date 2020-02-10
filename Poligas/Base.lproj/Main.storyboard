@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rb2-if-ITR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bh1-Ef-VsV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -145,6 +145,64 @@
             </objects>
             <point key="canvasLocation" x="2874" y="-668"/>
         </scene>
+        <!--Scheduler Order Table View Controller-->
+        <scene sceneID="e4V-E0-tjH">
+            <objects>
+                <viewController id="gkG-Dc-ZoT" customClass="SchedulerOrderTableViewController" customModule="Poligas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I4v-aj-WLC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2TL-cU-05E">
+                                <rect key="frame" x="0.0" y="140" width="414" height="624"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="Szy-eM-kSd" imageView="AgA-O2-QWO" rowHeight="80" style="IBUITableViewCellStyleDefault" id="t5U-GU-MdO">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t5U-GU-MdO" id="BeN-Tg-Wf9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Szy-eM-kSd">
+                                                    <rect key="frame" x="137" y="0.0" width="257" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="BlueTank" id="AgA-O2-QWO">
+                                                    <rect key="frame" x="20" y="0.0" width="102" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gkG-Dc-ZoT" id="z1E-nO-qLV"/>
+                                    <outlet property="delegate" destination="gkG-Dc-ZoT" id="au4-nP-oE9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GkZ-9x-rMG" firstAttribute="bottom" secondItem="2TL-cU-05E" secondAttribute="bottom" id="8N2-fR-aDM"/>
+                            <constraint firstItem="2TL-cU-05E" firstAttribute="leading" secondItem="GkZ-9x-rMG" secondAttribute="leading" id="OQy-oC-Mtq"/>
+                            <constraint firstItem="GkZ-9x-rMG" firstAttribute="trailing" secondItem="2TL-cU-05E" secondAttribute="trailing" id="d4N-FZ-TPZ"/>
+                            <constraint firstItem="2TL-cU-05E" firstAttribute="top" secondItem="GkZ-9x-rMG" secondAttribute="top" id="d7x-vJ-swY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GkZ-9x-rMG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2tg-CP-sO9"/>
+                    <connections>
+                        <outlet property="tableView" destination="2TL-cU-05E" id="zVd-vr-i9j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="znq-Vz-A7I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018.840579710145" y="1580.3571428571429"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="Eqx-Zt-yg5">
             <objects>
@@ -157,15 +215,60 @@
                                 <rect key="frame" x="0.0" y="798" width="54" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="gR0-9Q-Jf9">
+                                <rect key="frame" x="0.0" y="208" width="414" height="84"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDz-n2-4JY">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                        <state key="normal" title="Pedidos Express">
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="0f7-Nt-3xX" kind="show" id="5zt-JK-9MR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIO-dv-Nyf">
+                                        <rect key="frame" x="0.0" y="54" width="414" height="30"/>
+                                        <state key="normal" title="Pedidos Agendados"/>
+                                        <connections>
+                                            <segue destination="gkG-Dc-ZoT" kind="show" id="rn1-Nf-6gF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gR0-9Q-Jf9" firstAttribute="leading" secondItem="Xga-2c-Izy" secondAttribute="leading" id="Gkr-lX-ceN"/>
+                            <constraint firstItem="gR0-9Q-Jf9" firstAttribute="top" secondItem="Xga-2c-Izy" secondAttribute="top" constant="68" id="Hnh-Wu-02b"/>
+                            <constraint firstItem="Xga-2c-Izy" firstAttribute="trailing" secondItem="gR0-9Q-Jf9" secondAttribute="trailing" id="SmU-v6-znt"/>
+                            <constraint firstItem="Xga-2c-Izy" firstAttribute="bottom" secondItem="gR0-9Q-Jf9" secondAttribute="bottom" constant="472" id="irh-Zm-Isc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Xga-2c-Izy"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Settings" id="ZHQ-o1-Kxz"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wse-if-NnV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2874" y="846"/>
+            <point key="canvasLocation" x="2002.8985507246377" y="1601.1160714285713"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nKW-sW-W2Y">
+            <objects>
+                <viewController id="0f7-Nt-3xX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qjJ-1E-8D4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="J94-jT-lbc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c0P-7d-vJr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="myi-iD-VEY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3026" y="1600"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9u6-5t-ilq">
@@ -329,10 +432,10 @@
             </objects>
             <point key="canvasLocation" x="2934.7826086956525" y="89.732142857142847"/>
         </scene>
-        <!--View Controller-->
+        <!--Type Order View Controller-->
         <scene sceneID="Sfd-c8-qS2">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="QmZ-nn-8E8" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="QmZ-nn-8E8" customClass="TypeOrderViewController" customModule="Poligas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Qi-Jb-gHN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -430,7 +533,7 @@
                                 <color key="textColor" red="0.79609507319999995" green="0.79600626230000004" blue="0.80000120399999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zT-gC-8GQ">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zT-gC-8GQ">
                                 <rect key="frame" x="97" y="618" width="220" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="Avl-GK-sLH"/>
@@ -440,7 +543,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ehg-xB-xkQ" kind="show" id="uM8-ZG-Rmn"/>
+                                    <segue destination="Ehg-xB-xkQ" kind="show" id="6Yq-Da-sdd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -462,6 +565,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dAh-dG-M5O"/>
                     <connections>
+                        <outlet property="commentButton" destination="2zT-gC-8GQ" id="eXy-QW-5K3"/>
                         <outlet property="poligasProgressTextView" destination="vjt-cH-xen" id="fNy-tZ-oym"/>
                     </connections>
                 </viewController>
@@ -849,6 +953,7 @@ o sugerencia que desees que conozcamos</string>
     </scenes>
     <resources>
         <image name="Background" width="210.5" height="320"/>
+        <image name="BlueTank" width="312" height="247"/>
         <image name="ButtonBG" width="220" height="61"/>
         <image name="CardTanqBlue" width="119" height="144"/>
         <image name="Lens" width="215.5" height="212.5"/>
@@ -863,6 +968,6 @@ o sugerencia que desees que conozcamos</string>
         <image name="person" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="c3d-5g-bAv"/>
+        <segue reference="8B6-Fw-2U6"/>
     </inferredMetricsTieBreakers>
 </document>
