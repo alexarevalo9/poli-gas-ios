@@ -16,12 +16,30 @@ import FirebaseAuth
 class TypeOrderViewController: UIViewController {
     
     let db = Firestore.firestore()
+    var indice = 1
+    var numTanques = ""
+    
+    
+    @IBOutlet weak var cardImageView: UIImageView!
+    @IBOutlet weak var lblNumTanq: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        saveExpressOrder()
-        
+        switch indice {
+               case 1:
+                   cardImageView.image = UIImage(named: "YellowTank")
+               case 2:
+                   cardImageView.image = UIImage(named: "IndusTanq")
+               default:
+                   cardImageView.image = UIImage(named: "BlueTank")
+               }
+        lblNumTanq.text = numTanques
     }
+    
+    @IBAction func expressOrderButton(_ sender: Any) {
+        saveExpressOrder()
+    }
+    
     
     func saveExpressOrder(){
         
@@ -34,8 +52,8 @@ class TypeOrderViewController: UIViewController {
         let useruuid = Auth.auth().currentUser?.uid
         
         db.collection("expressorder").addDocument(data: [
-            "typecylinder": "1",
-            "totalcylinder": "1",
+            "typecylinder": indice,
+            "totalcylinder": numTanques,
             "date": date,
             "useruuid": useruuid ?? ""
         ]) { err in

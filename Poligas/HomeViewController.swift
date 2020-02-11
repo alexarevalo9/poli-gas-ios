@@ -32,6 +32,14 @@ class HomeViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "typeRequestSegue"{
+            let typeRequestView = segue.destination as! TypeOrderViewController
+            typeRequestView.indice = carouselCards.currentItemIndex
+            typeRequestView.numTanques = lblNumero.text ?? ""
+        }
+    }
+    
     
     @IBAction func btnMas(_ sender: Any) {
     
