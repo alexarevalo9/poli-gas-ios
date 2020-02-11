@@ -15,67 +15,54 @@ import FirebaseAuth
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
+    let db = Firestore.firestore()
+    
     @IBOutlet weak var mapView: MKMapView!
-    let locationManager = CLLocationManager()//Nos ayuda a gestion ubicaciones del mapa
     let firestore = Firestore.firestore()
+    var locationPin : CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.locationManager.requestAlwaysAuthorization()
-        self.locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-        }
         
         mapView.delegate = self
         mapView.mapType = .standard
         mapView.isZoomEnabled = true
         mapView.isScrollEnabled = true
-        centerMapIn(location: locationManager.location)
-        
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let lastLocation = locations[locations.count - 1].coordinate
-        let lat = lastLocation.latitude.description
-        let long = lastLocation.longitude.description
-        
-        firestore.collection("location").document("test").setData(
-            ["coordinates": [lat, long] ]
-        ){(error) in
-            if error != nil{
-                self.showAlert(title: "Error", message: error?.localizedDescription ?? "Error")
-            }}
-        
-        mapView.mapType = MKMapType.standard
         
         let annotation = MKPointAnnotation()
-        annotation.coordinate = lastLocation
+        let coordinates = CLLocationCoordinate2D(latitude: -0.209752, longitude: -78.488034)
+        annotation.coordinate = coordinates
         annotation.title = "Poli-Gas"
-        annotation.subtitle = "current location"
+        annotation.subtitle = "Ubicación Actual"
         mapView.addAnnotation(annotation)
+        
+        centerMapIn(location: CLLocation(latitude: -0.209752, longitude: -78.488034))
         
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKPointAnnotation {
             let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myPin")
-
+            
             pinAnnotationView.pinTintColor = .blue
             pinAnnotationView.isDraggable = true
             pinAnnotationView.canShowCallout = true
             pinAnnotationView.animatesDrop = true
-
+            
             return pinAnnotationView
         }
-
+        
         return nil
     }
     
+    func mapView(_ mapView: MKMapView, annotationView pinAnnotation: MKAnnotationView, didChange newState: MKAnnotationView.DragState, fromOldState oldState: MKAnnotationView.DragState) {
+        
+        let coordinates = CLLocation(latitude: pinAnnotation.annotation?.coordinate.latitude ?? 0, longitude: pinAnnotation.annotation?.coordinate.longitude ?? 0)
+        
+        locationPin = coordinates
+        saveCurrentLocation(latitud : locationPin.coordinate.latitude, longitud : locationPin.coordinate.longitude)
+       
+    }
     
     func showAlert(title : String, message : String){
         let alertController = UIAlertController(title : title, message : message, preferredStyle: .alert)
@@ -95,10 +82,29 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    
     @IBAction func centerLocationPressed(_ sender: Any) {
-        centerMapIn(location: locationManager.location!)
+        if(locationPin != nil){
+            centerMapIn(location: locationPin)
+        }
     }
     
+    func saveCurrentLocation(latitud : Double, longitud : Double){
+        
+        let useruuid = Auth.auth().currentUser?.uid
+        
+        // Add a new document in collection "location"
+        db.collection("location").document(useruuid!).setData([
+            "latitud": latitud,
+            "longitud": longitud
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        
+    }
     
 }
