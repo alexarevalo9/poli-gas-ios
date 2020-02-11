@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bh1-Ef-VsV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x2j-r1-9jw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -330,7 +330,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZB-7d-H2t">
-                                <rect key="frame" x="-13" y="646" width="440" height="122"/>
+                                <rect key="frame" x="97" y="707" width="220" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Comencemos!!!" backgroundImage="ButtonBG">
                                     <color key="titleColor" red="0.79609507319999995" green="0.79600626230000004" blue="0.80000120399999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -744,7 +744,7 @@ o sugerencia que desees que conozcamos</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCi-8w-nUf">
-                                <rect key="frame" x="320" y="567" width="23" height="32"/>
+                                <rect key="frame" x="320" y="567" width="23" height="31.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="6ll-Lj-KTN"/>
                                     <constraint firstAttribute="width" constant="23" id="zIU-zI-16n"/>
@@ -771,7 +771,7 @@ o sugerencia que desees que conozcamos</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0w-c9-Ie3">
-                                <rect key="frame" x="316" y="477" width="27" height="32"/>
+                                <rect key="frame" x="316" y="477" width="27" height="31.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="fKJ-xY-Nlv"/>
                                     <constraint firstAttribute="width" constant="27" id="gIT-zE-BNv"/>
@@ -926,7 +926,7 @@ o sugerencia que desees que conozcamos</string>
                                 </constraints>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pra-dV-Bzj">
-                                <rect key="frame" x="344" y="785.5" width="50" height="50"/>
+                                <rect key="frame" x="344" y="785.5" width="50" height="49.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IHb-9f-SkI"/>
                                     <constraint firstAttribute="height" constant="50.5" id="vQi-1k-l1y"/>
@@ -997,12 +997,12 @@ o sugerencia que desees que conozcamos</string>
         <image name="LessButton-2" width="30" height="30"/>
         <image name="MoreButton" width="30" height="30"/>
         <image name="bgMenu" width="360" height="56"/>
-        <image name="calendar" catalog="system" width="64" height="54"/>
-        <image name="hourglass.bottomhalf.fill" catalog="system" width="52" height="64"/>
+        <image name="calendar" catalog="system" width="64" height="52"/>
+        <image name="hourglass.bottomhalf.fill" catalog="system" width="54" height="64"/>
         <image name="house" catalog="system" width="64" height="54"/>
-        <image name="info.circle" catalog="system" width="64" height="62"/>
-        <image name="location.circle" catalog="system" width="64" height="62"/>
-        <image name="person" catalog="system" width="64" height="60"/>
+        <image name="info.circle" catalog="system" width="64" height="60"/>
+        <image name="location.circle" catalog="system" width="64" height="60"/>
+        <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="c3d-5g-bAv"/>
