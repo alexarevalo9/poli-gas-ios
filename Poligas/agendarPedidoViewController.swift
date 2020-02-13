@@ -16,8 +16,13 @@ class agendarPedidoViewController: UIViewController, UIImagePickerControllerDele
     let calendario = UIDatePicker()
     let calendario2 = UIDatePicker()
     
+    var indice = 1
+    var numTanques = ""
+    
     @IBOutlet weak var txtFechaEntrega: UITextField!
     @IBOutlet weak var txtHour: UITextField!
+    @IBOutlet weak var cardImageView: UIImageView!
+    @IBOutlet weak var lblNumTanq: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,17 @@ class agendarPedidoViewController: UIViewController, UIImagePickerControllerDele
         txtFechaEntrega.delegate = self
         calendario.datePickerMode = .dateAndTime
         calendario.addTarget(self, action: #selector(dateValueChanged(_:)), for: .valueChanged)
+        
+        switch indice {
+        case 1:
+            cardImageView.image = UIImage(named: "YellowTankCard")
+        case 2:
+            cardImageView.image = UIImage(named: "IndusTankCard")
+        default:
+            cardImageView.image = UIImage(named: "BluwTankCard")
+        }
+        
+        lblNumTanq.text = numTanques
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

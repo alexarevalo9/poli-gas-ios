@@ -18,9 +18,9 @@ class HomeViewController: UIViewController {
     
     //arrayTanq
     var cardsImg = [
-        UIImage(named: "BlueTank"),
-        UIImage(named: "YellowTank"),
-        UIImage(named: "IndusTanq")
+        UIImage(named: "BlueTankCard"),
+        UIImage(named: "YellowTankCard"),
+        UIImage(named: "IndusTankCard")
     ]
     
     override func viewDidLoad() {
