@@ -18,7 +18,9 @@ class ExpressOrderTableViewController: UIViewController,UITableViewDataSource, U
      var refresher: UIRefreshControl!
     
     @IBOutlet weak var tableView: UITableView!
-    var data = ["key1", "example value 1"]
+    var data = [""]
+    var imageTank = [UIImage(named: "YellowTank")]
+    var numTank = [""]
     let db = Firestore.firestore()
 
     override func viewDidLoad() {
@@ -38,6 +40,8 @@ class ExpressOrderTableViewController: UIViewController,UITableViewDataSource, U
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = data[indexPath.row]
+        cell.imageView?.image = imageTank[indexPath.row]
+        cell.detailTextLabel?.text = numTank[indexPath.row]
         return cell
     }
     
@@ -50,17 +54,39 @@ class ExpressOrderTableViewController: UIViewController,UITableViewDataSource, U
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
+                    
+                    self.imageTank.removeAll()
+                    self.data.removeAll()
+                    self.numTank.removeAll()
+                    
                     for document in querySnapshot!.documents {
-                        self.refresh()
+                        
+                        self.data.append("Fecha:\(document.get("date") as! String)")
+                        self.showImageTank(numberTank : document.get("typecylinder") as! Int)
+                        self.numTank.append("Número de tanques: \(document.get("totalcylinder") as! String)")
                         print("\(document.documentID) => \(document.data())")
                     }
+                    self.refresh()
                 }
         }
         
     }
     
+    func showImageTank(numberTank : Int){
+        
+        switch numberTank {
+        case 1:
+            imageTank.append(UIImage(named: "YellowTank"))
+        case 2:
+            imageTank.append(UIImage(named: "IndusTanq"))
+        default:
+            imageTank.append(UIImage(named: "BlueTank"))
+        }
+        
+    }
+    
     @objc func refresh(){
-        data = ["4","5"]
+        //data = ["4","5"]
         print("refreshed")
         self.tableView.reloadData()
         self.refresher.endRefreshing()
