@@ -27,11 +27,11 @@ class TypeOrderViewController: UIViewController {
         super.viewDidLoad()
         switch indice {
                case 1:
-                   cardImageView.image = UIImage(named: "YellowTank")
+                   cardImageView.image = UIImage(named: "YellowTankCard")
                case 2:
-                   cardImageView.image = UIImage(named: "IndusTanq")
+                   cardImageView.image = UIImage(named: "IndusTankCard")
                default:
-                   cardImageView.image = UIImage(named: "BlueTank")
+                   cardImageView.image = UIImage(named: "BlueTankCard")
                }
         lblNumTanq.text = numTanques
     }
@@ -39,6 +39,15 @@ class TypeOrderViewController: UIViewController {
     @IBAction func expressOrderButton(_ sender: Any) {
         saveExpressOrder()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "agendarPedidoSegue"{
+            let typeRequestView = segue.destination as! agendarPedidoViewController
+            typeRequestView.indice = indice
+            typeRequestView.numTanques = numTanques
+        }
+    }
+    
     
     
     func saveExpressOrder(){
@@ -63,26 +72,6 @@ class TypeOrderViewController: UIViewController {
                 print("Order Express added successfully")
             }
         }
-    }
-    
-    func saveSchedulerOrder(){
-        
-        let useruuid = Auth.auth().currentUser?.uid
-        
-        db.collection("shcedulerorder").addDocument(data: [
-            "typecylinder": "1",
-            "totalcylinder": "1",
-            "date":"123",
-            "hour":"345",
-            "useruuid": useruuid ?? ""
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Order Express added successfully")
-            }
-        }
-        
     }
     
 }

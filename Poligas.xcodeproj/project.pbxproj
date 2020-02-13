@@ -11,6 +11,8 @@
 		2803DDA923F19BC6008F4294 /* SchedulerOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2803DDA823F19BC6008F4294 /* SchedulerOrderTableViewController.swift */; };
 		2803DDAB23F2E0B2008F4294 /* ExpressOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2803DDAA23F2E0B2008F4294 /* ExpressOrderTableViewController.swift */; };
 		2803DDAF23F2EA57008F4294 /* Poligas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2803DDAE23F2EA57008F4294 /* Poligas.swift */; };
+		2803DDB123F587E9008F4294 /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2803DDB023F587E7008F4294 /* FeedBackViewController.swift */; };
+		2803DDB323F5A5F8008F4294 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2803DDB223F5A5F8008F4294 /* StartViewController.swift */; };
 		283BCC3C23E4875000E9786D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283BCC3B23E4875000E9786D /* HomeViewController.swift */; };
 		28746BEE23D1E6A500494DF7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28746BED23D1E6A500494DF7 /* MapViewController.swift */; };
 		28746BF323D2047C00494DF7 /* mapgpx.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 28746BF223D2047C00494DF7 /* mapgpx.gpx */; };
@@ -32,6 +34,8 @@
 		2803DDA823F19BC6008F4294 /* SchedulerOrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerOrderTableViewController.swift; sourceTree = "<group>"; };
 		2803DDAA23F2E0B2008F4294 /* ExpressOrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressOrderTableViewController.swift; sourceTree = "<group>"; };
 		2803DDAE23F2EA57008F4294 /* Poligas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poligas.swift; sourceTree = "<group>"; };
+		2803DDB023F587E7008F4294 /* FeedBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
+		2803DDB223F5A5F8008F4294 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		283BCC3B23E4875000E9786D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		28746BED23D1E6A500494DF7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		28746BF223D2047C00494DF7 /* mapgpx.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapgpx.gpx; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 				2803DDA823F19BC6008F4294 /* SchedulerOrderTableViewController.swift */,
 				2803DDAA23F2E0B2008F4294 /* ExpressOrderTableViewController.swift */,
 				2803DDAE23F2EA57008F4294 /* Poligas.swift */,
+				2803DDB023F587E7008F4294 /* FeedBackViewController.swift */,
+				2803DDB223F5A5F8008F4294 /* StartViewController.swift */,
 			);
 			path = Poligas;
 			sourceTree = "<group>";
@@ -247,9 +253,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2803DDAB23F2E0B2008F4294 /* ExpressOrderTableViewController.swift in Sources */,
+				2803DDB323F5A5F8008F4294 /* StartViewController.swift in Sources */,
 				2803DDA923F19BC6008F4294 /* SchedulerOrderTableViewController.swift in Sources */,
 				2803DDA723F18CF6008F4294 /* TypeOrderViewController.swift in Sources */,
 				28A499A523A1403400F99F70 /* ViewController.swift in Sources */,
+				2803DDB123F587E9008F4294 /* FeedBackViewController.swift in Sources */,
 				2803DDAF23F2EA57008F4294 /* Poligas.swift in Sources */,
 				28A499A123A1403400F99F70 /* AppDelegate.swift in Sources */,
 				28770A7E23D730890054B326 /* ProgressBarViewController.swift in Sources */,

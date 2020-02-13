@@ -15,11 +15,10 @@ import FirebaseAuth
 
 class ExpressOrderTableViewController: UIViewController,UITableViewDataSource, UITableViewDelegate  {
     
-     var refresher: UIRefreshControl!
-    
     @IBOutlet weak var tableView: UITableView!
+    var refresher: UIRefreshControl!
     var data = [""]
-    var imageTank = [UIImage(named: "YellowTank")]
+    var imageTank = [UIImage(named: "")]
     var numTank = [""]
     let db = Firestore.firestore()
 
@@ -61,7 +60,7 @@ class ExpressOrderTableViewController: UIViewController,UITableViewDataSource, U
                     
                     for document in querySnapshot!.documents {
                         
-                        self.data.append("Fecha:\(document.get("date") as! String)")
+                        self.data.append("Fecha: \(document.get("date") as! String)")
                         self.showImageTank(numberTank : document.get("typecylinder") as! Int)
                         self.numTank.append("Número de tanques: \(document.get("totalcylinder") as! String)")
                         print("\(document.documentID) => \(document.data())")
@@ -76,17 +75,16 @@ class ExpressOrderTableViewController: UIViewController,UITableViewDataSource, U
         
         switch numberTank {
         case 1:
-            imageTank.append(UIImage(named: "YellowTank"))
+            imageTank.append(UIImage(named: "YellowTankCard"))
         case 2:
-            imageTank.append(UIImage(named: "IndusTanq"))
+            imageTank.append(UIImage(named: "IndusTankCard"))
         default:
-            imageTank.append(UIImage(named: "BlueTank"))
+            imageTank.append(UIImage(named: "BlueTankCard"))
         }
         
     }
     
     @objc func refresh(){
-        //data = ["4","5"]
         print("refreshed")
         self.tableView.reloadData()
         self.refresher.endRefreshing()

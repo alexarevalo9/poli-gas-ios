@@ -21,14 +21,17 @@ class ProgressBarViewController: UIViewController, FlexibleSteppedProgressBarDel
     var countdownTimer: Timer!
     var totalTime = 0
     
+    
     @IBOutlet weak var poligasProgressTextView: UILabel!
-    //@IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var progressIndicatorView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        progressIndicatorView.startAnimating()
         setupProgressBar()
         totalTime = Int.random(in: 5..<10)
         startTimer()
+        
         
     }
     
@@ -73,7 +76,9 @@ class ProgressBarViewController: UIViewController, FlexibleSteppedProgressBarDel
             totalTime = Int.random(in: 5..<10)
             startTimer()
         case 4:
+            progressIndicatorView.stopAnimating()
             poligasProgressTextView.text = "Gracias por usar nuestra app"
+            self.performSegue(withIdentifier: "feedBackSegue", sender: self)
             //commentButton.isHidden = false
         default:
             print("Progress  Bar Error")
