@@ -27,6 +27,6 @@ Este proyecto es desarrollado por un grupo de estudiantes de la Escuela Politéc
 <img src="https://user-images.githubusercontent.com/46785980/81255905-8f77b280-8ff4-11ea-9898-257a25174d27.gif">
 
 ## Licencia
-MIT License Copyright (c) 2020 Alex Arévalo & Bryan Zambrano. Es software libre y puede redistribuirse bajo los términos especificados en el archivo [LICENSE](LICENSE).
+MIT License Copyright (c) 2020 Alex Arévalo, Bryan Zambrano & Alex Vilatuña. Es software libre y puede redistribuirse bajo los términos especificados en el archivo [LICENSE](LICENSE).
 
 
