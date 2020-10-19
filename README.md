@@ -14,7 +14,7 @@ Si no deseas esperar a tu pedido puedes **agendarlo**, de esta manera tendrás t
 - Puedes crear alertas que te recuerden pedir tu cilindro
 - Descuentos
 
-Version Android: https://github.com/alexarevalo9/poli_gas_android
+Version Android: [PoliGas Android App](https://github.com/alexarevalo9/poli_gas_android)
 
 Este proyecto es desarrollado por un grupo de estudiantes de la Escuela Politécnica Nacional dinámicos y trabajadores. Nuestro objetivo es seguir aprendiendo y fortaleciendo nuestras fortalezas en el ámbito de desarrollo de software.
 ## Tecnologías 
